@@ -15,18 +15,9 @@ v3_salary_class = 98500
 v4_salary_class = 102600
 d1_salary_class = 108900
 
-saving_rate = 0.3
+saving_rate = 0.2
 years_employed = 30
 money_saved = 0 #always 0 for initial start
-
-for years in range(1,years_employed+1):
-    current_rank = rank_calculator(current_year)
-    for months in range(12):
-        print(money_saved)
-        money_saved *= money_saved * (1 + monthly_ROI)
-        salary_saved = salary(current_year,current_rank) * saving_rate
-        money_saved += salary_saved
-    current_year += 1
 
 
 def v1_class(year): #하사 호봉 계산기
@@ -68,7 +59,7 @@ def rank_salary(year, rank):
         return 0
 
 def salary(year, rank):
-    return rank_salary(rank)*(1+raise_rate)**year
+    return rank_salary(year, rank)*(1+raise_rate)**year
 
 def rank_calculator(year): #상사 까지만 진급한다는 가정
     if year < 5:
@@ -77,3 +68,14 @@ def rank_calculator(year): #상사 까지만 진급한다는 가정
         return 2
     else:
         return 3
+
+#monthly_ROI = 0 
+for years in range(1,years_employed+1):
+    current_rank = rank_calculator(current_year)
+    for months in range(12):
+        money_saved = money_saved * (1 + monthly_ROI)
+        salary_saved = salary(current_year,current_rank) * saving_rate
+        money_saved += salary_saved
+    current_year += 1
+    print(money_saved)
+    
