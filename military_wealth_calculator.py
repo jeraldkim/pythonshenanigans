@@ -27,4 +27,26 @@ for i in range(1,years_employed):
     yearly_salary *= (1 + raise_rate)
     salary_class_increase *= (1 + raise_rate)
 
-def
+def v1_class(year): #하사 호봉 계산기
+    return year + 1
+
+def v2_class(year):
+    if year < 3:
+        return 1
+    else:
+        return year - 1
+
+def v3_class(year):
+    if year < 6:
+        return 1
+    else:
+        return year - 4
+
+def v4_class(year):
+    if year < 14:
+        return 1
+    else:
+        return year - 12
+
+def d1_class(year):
+    return v1_class(year)
