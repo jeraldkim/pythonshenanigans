@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotext as plt2
 
 raise_rate = 0.04 #연봉 인상률 2006~2022 에서부터 딴 평균
 investment_ROI = 0.08 #S&P500 평균 1년 수익
@@ -91,9 +92,8 @@ for years in range(1,years_employed+1):
     x.append(current_year)
     y.append(int(money_saved))
 
-plt.plot(y)
-plt.show()
-
-
-print(x)
-print(y)
+plt2.scatter(x,y)
+plt2.title("Total Savings Every Year")
+plt2.show()
+#print(x)
+#print(y)
