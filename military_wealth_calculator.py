@@ -91,9 +91,12 @@ for years in range(1,years_employed+1):
     x.append(current_year)
     y.append(int(money_saved))
 
-plt.plot(x,y)
+plt.plot(y)
+#plt.show()
+plt.draw()
+plt.pause(0.001)
+input("Open Ports --> Open Preview or Browser --> push enter to continue")
 
-plt.show()
 
-print(x)
-print(y)
+#print(x)
+#print(y)
