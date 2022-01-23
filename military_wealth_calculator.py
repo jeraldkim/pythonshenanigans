@@ -16,7 +16,7 @@ v3_salary_class = 98500
 v4_salary_class = 102600
 d1_salary_class = 108900
 
-saving_rate = 0.2
+saving_rate = 0.3
 years_employed = 30
 money_saved = 0 #always 0 for initial start
 
@@ -79,5 +79,4 @@ for years in range(1,years_employed+1):
         money_saved += salary_saved
     current_year += 1
     print_result = int(money_saved)
-    print(f"{print_result:,}")
-    
+    print(f'Year:{current_year} ',f'{print_result:,}')
