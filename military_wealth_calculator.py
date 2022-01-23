@@ -62,7 +62,7 @@ def rank_salary(year, rank): #계급별로 호봉까지 가만하고 계산하�
 def salary(year, rank):
     return rank_salary(year, rank)*(1+raise_rate)**year
 
-def rank_calculator(year): #상사 까지만 진급한다는 가정
+def rank_calculator(year): #원사까지 무난하게 진급한다는 가정
     if year < 5:
         return 1
     elif year < 10:
@@ -81,4 +81,4 @@ for years in range(1,years_employed+1):
         money_saved += salary_saved
     current_year += 1
     print_result = int(money_saved)
-    print(f'Year:{current_year} ',f'{print_result:,}')
+    print(f'Year {current_year}: ',f'{print_result:,}')
