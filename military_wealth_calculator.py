@@ -1,6 +1,7 @@
 raise_rate = 0.04 #연봉 인상률 2006~2022 에서부터 딴 평균
 investment_ROI = 0.08 #S&P500 평균 1년 수익
-monthly_ROI = 0.00643
+monthly_ROI = (1 + investment_ROI)**(1/12) - 1
+#0.00643
 current_year = 0
 
 v1_monthly_salary = 1705400 #하사 2022 월급
