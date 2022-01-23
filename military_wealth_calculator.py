@@ -92,7 +92,7 @@ for years in range(1,years_employed+1):
     x.append(current_year)
     y.append(int(money_saved))
 
-plt2.scatter(x,y)
+plt2.scatter(x,y,marker ='*')
 plt2.title("Total Savings Every Year")
 plt2.show()
 #print(x)
