@@ -78,5 +78,6 @@ for years in range(1,years_employed+1):
         salary_saved = salary(current_year,current_rank) * saving_rate
         money_saved += salary_saved
     current_year += 1
-    print(money_saved)
+    print_result = int(money_saved)
+    print(f"{print_result:,}")
     
