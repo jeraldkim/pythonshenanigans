@@ -77,6 +77,8 @@ def rank_calculator(year): #원사까지 무난하게 진급한다는 가정
         return 4
 
 monthly_ROI =  (1 + 0.08)**(1/12) - 1
+x = [0]
+y = [0]
 for years in range(1,years_employed+1):
     current_rank = rank_calculator(current_year)
     for months in range(12):
@@ -86,3 +88,12 @@ for years in range(1,years_employed+1):
     current_year += 1
     print_result = int(money_saved)
     print(f'Year {current_year}: ',f'{print_result:,}')
+    x.append(current_year)
+    y.append(int(money_saved))
+
+plt.plot(x,y)
+
+plt.show()
+
+print(x)
+print(y)
