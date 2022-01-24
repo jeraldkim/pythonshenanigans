@@ -10,7 +10,7 @@ tasks:
     command: pip install pandas --upgrade pandas
   - name: matplotlib
     command: pip install matplotlib --upgrade matplotlib
-  - name: plotext
+  - init: plotext
     command: pip install plotext --upgrade plotext
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/

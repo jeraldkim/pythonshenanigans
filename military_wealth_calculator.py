@@ -1,6 +1,6 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+#import numpy as np
+#import pandas as pd
+#import matplotlib.pyplot as plt
 import plotext as plt2
 
 raise_rate = 0.04 #연봉 인상률 2006~2022 에서부터 딴 평균
@@ -8,7 +8,7 @@ investment_ROI = 0.08 #S&P500 평균 1년 수익
 monthly_ROI = (1 + investment_ROI)**(1/12) - 1
 #0.00643
 current_year = 0
-
+plt2.limit_size(20, 15)
 v1_monthly_salary = 1705400 #하사 2022 월급
 v2_monthly_salary = 1791100
 v3_monthly_salary = 2220700
@@ -21,7 +21,7 @@ v3_salary_class = 98500
 v4_salary_class = 102600
 d1_salary_class = 108900
 
-saving_rate = 0.2
+saving_rate = 0.25
 years_employed = 35
 money_saved = 0 #always 0 for initial start
 
